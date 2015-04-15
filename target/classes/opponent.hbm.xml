@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cmpe275lab3.Opponent" table="Opponents" catalog="cmpe275lab3">
+        <id name="rowId" type="int">
+            <column name="ID" not-null="true" />
+        </id>
+        <property name="playerId" type="long">
+            <column name="PlayerID" not-null="true" />
+        </property>
+        <property name="opponentId" type="long">
+            <column name="OpponentID" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

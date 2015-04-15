@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cmpe275lab3.Sponsor" table="Sponsors" catalog="cmpe275lab3">
+        <id name="sponsorId" type="long">
+            <column name="SponsorID" not-null="true" />
+            <!-- <generator class="identity" /> -->
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="60" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="150" />
+        </property>
+        <component name="address" class="cmpe275lab3.Address">
+            <property name="street" column="Street" type="string" length="50" />
+            <property name="city" column="City" type="string" length="50" />
+            <property name="state" column="State" type="string" length="50" />
+            <property name="zip" column="Zip" type="string" length="10" />
+        </component>
+    </class>
+</hibernate-mapping>
